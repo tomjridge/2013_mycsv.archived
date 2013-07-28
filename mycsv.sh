@@ -4,9 +4,18 @@ let _ = Ocaml.packs := ["unix"]
 
 let _ = Ocaml.ocamlflags := ["-w"; "-1..100"]
 
+(* for local versions *)
+(*
 let _ = Ocaml.sources := [
+  "mycsv_resources.ml"; (* should be an empty file if using local versions *)
   "p3_lib.ml";
   "mycsv.ml";
+]
+*)
+
+(* for distribution *)
+let _ = Ocaml.sources := [
+  "mycsv_resources.ml";
 ]
 
 --
@@ -33,6 +42,7 @@ A description of the width options:
 
 *)
 
+open Mycsv_resources
 open P3_lib
 open Everything
 open BasicParsers
