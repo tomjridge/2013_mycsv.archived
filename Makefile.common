@@ -1,0 +1,4 @@
+P1_PKG:=-package p1
+P1_GEN_P4:=p1_gen_p4.native # must be on path
+
+-include ../Makefile.local

@@ -1,7 +1,9 @@
+include ../Makefile.common
+
 SHELL:=bash
 
 IGNORE_WARNINGS:=-w -3 # Warning 3: deprecated: String.create
-OCAMLOPT=ocamlfind ocamlopt $(IGNORE_WARNINGS) -package unix,str -I ../src_ext/p1/build p1.cmxa 
+OCAMLOPT=ocamlfind ocamlopt $(IGNORE_WARNINGS) -package unix,str $(P1_PKG:.cma=.cmxa)
 
 all: before_all
 	$(OCAMLOPT) -c mycsv_lib.mli mycsv_lib.ml
@@ -14,3 +16,4 @@ clean: FORCE
 	rm -f *.ml *.mli *.cmi *.cmx *.o mycsv.native
 
 FORCE:
+
