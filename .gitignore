@@ -1,1 +1,4 @@
 src_ext/p1
+Makefile.local
+*~
+result
