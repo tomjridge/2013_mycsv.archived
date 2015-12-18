@@ -1,0 +1,2 @@
+  - performance is terrible on large files
+    - move to parsing line at a time, or move to p3/4/5
